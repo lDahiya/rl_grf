@@ -1,0 +1,12 @@
+gfootball~=2.10.2
+numpy~=1.23.4
+pygame~=2.1.2
+gym~=0.21.0
+opencv-python~=4.6.0.66
+psutil~=5.9.4
+setuptools~=65.5.1
+pip~=22.3.1
+wheel~=0.38.3
+cloudpickle~=2.2.0
+--extra-index-url https://download.pytorch.org/whl/cu116
+torchvision==0.13.1
