@@ -1,6 +1,8 @@
+import getopt
 import os
 import random
 import string
+import sys
 
 import gfootball.env as football_env
 import torch
@@ -60,7 +62,7 @@ def savePlotsAndModel(agent, plotter, config):
     return
 
 
-def process(agentName=None, testMode=False):
+def controller(agentName=None):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     max_ep_len = 10000
     if agentName is None:
@@ -94,5 +96,13 @@ def process(agentName=None, testMode=False):
     env.close()
 
 
+def process(argv):
+    opts, args = getopt.getopt(argv, "hi:o:", ["modelName=", "render="])
+    for opt, arg in opts:
+        if opt in ("-model", "--modelName"):
+            modelName = arg
+    controller(modelName)
+
+
 if __name__ == '__main__':
-    process()
+    process(sys.argv[1:])
