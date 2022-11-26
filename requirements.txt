@@ -10,3 +10,5 @@ wheel~=0.38.3
 cloudpickle~=2.2.0
 --extra-index-url https://download.pytorch.org/whl/cu116
 torchvision==0.13.1
+six~=1.16.0
+matplotlib~=3.6.1
