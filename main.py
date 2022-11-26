@@ -97,9 +97,10 @@ def controller(agentName=None):
 
 
 def process(argv):
-    opts, args = getopt.getopt(argv, "hi:o:", ["modelName=", "render="])
+    modelName = None
+    opts, args = getopt.getopt(argv, "hi:o:", ["model=", "render="])
     for opt, arg in opts:
-        if opt in ("-model", "--modelName"):
+        if opt in ("-model", "--model"):
             modelName = arg
     controller(modelName)
 
