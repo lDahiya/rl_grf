@@ -87,8 +87,8 @@ def controller(agentName=None):
         "model_path": os.getcwd() + "\\models\\",
         "plots_path": os.getcwd() + "\\plots_ppo\\",
         "device": device,
-        "actor_class": 'ActorNetwork_v2',
-        "critic_class": 'CriticNetwork_v2'
+        "actor_class": 'ActorNetwork_v3',
+        "critic_class": 'CriticNetwork_v3'
     }
     agent, env, plotter, testMode = loadConfigurationAndTrain(configuration)
     agent.testWrapper(env, plotter, testMode)
