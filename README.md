@@ -14,6 +14,8 @@ pip -r requirements.txt
 <h3>Training & Testing</h3>
 python main.py
 <h3>Testing Trained Models</h3>
-python main.py
+python main.py --model < modelName >
+<br/>
+Model name can be found in /model/configuration.json 
 
 
