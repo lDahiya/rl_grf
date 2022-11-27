@@ -64,24 +64,24 @@ def savePlotsAndModel(agent, plotter, config):
 
 def controller(agentName=None):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    max_ep_len = 10000
+    max_ep_len = 5000
     if agentName is None:
         agentName = ''.join(random.choice(string.ascii_letters) for i in range(10))
     configuration = {
         'model_name': agentName,
         'env_name': "GRF",
-        "gamma": 0.99,
+        "gamma": 0.95,
         "learning_rate_actor": 0.0003,
         "learning_rate_critic": 0.001,
         "max_episode": max_ep_len,
         "max_test_episode": 50,
         "sync_time": max_ep_len * 4,
-        "max_timestep": 3000000,
+        "max_timestep": 5000000,
         "epochs": 40,
         "clip": 0.2,
         "action_size": 2,
         # "score": 470,
-        "print": 100,
+        "print": 500,
         "print_test": 10,
         "render_mode": True,
         "model_path": os.getcwd() + "\\models\\",
