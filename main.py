@@ -16,7 +16,9 @@ def initializeEnvironment(config):
     print("=" * 10 + " Initializing Environment " + "=" * 10)
     env_name = "academy_single_goal_versus_lazy"
     env = football_env.create_environment(env_name=env_name, representation='simple115v2',
-                                          render=False, rewards='scoring,checkpoints')
+                                          render=False,
+                                          rewards=config['reward_structure']
+                                          )
     config['state_size'] = env.observation_space.shape[0]
     config['action_size'] = env.action_space.n
     if not config['preload_model']:
@@ -70,13 +72,14 @@ def controller(agentName=None):
     configuration = {
         'model_name': agentName,
         'env_name': "GRF",
-        "gamma": 0.95,
+        'reward_structure': 'scoring',
+        "gamma": 0.99,
         "learning_rate_actor": 0.0003,
         "learning_rate_critic": 0.001,
-        "max_episode": max_ep_len,
+        "max_episode": 10000,
         "max_test_episode": 50,
         "sync_time": max_ep_len * 4,
-        "max_timestep": 5000000,
+        "max_timestep": 8000000,
         "epochs": 40,
         "clip": 0.2,
         "action_size": 2,
