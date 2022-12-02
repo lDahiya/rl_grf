@@ -232,5 +232,31 @@
         "model_path_critic": "C:\\Users\\loott\\PycharmProjects\\rl_grf\\models\\KlWxPgPEEu_critic.pth",
         "preload_model": true,
         "state_size": 115
+    },
+    "xIIXadjJWP": {
+        "model_name": "xIIXadjJWP",
+        "env_name": "GRF_academy_single_goal_versus_lazy",
+        "reward_structure": "scoring",
+        "gamma": 0.99,
+        "learning_rate_actor": 0.0003,
+        "learning_rate_critic": 0.001,
+        "max_episode": 10000,
+        "max_test_episode": 50,
+        "sync_time": 20000,
+        "max_timestep": 1000000,
+        "epochs": 40,
+        "clip": 0.2,
+        "action_size": 19,
+        "print": 500,
+        "print_test": 10,
+        "render_mode": true,
+        "model_path": "C:\\Users\\loott\\PycharmProjects\\rl_grf\\models\\",
+        "plots_path": "C:\\Users\\loott\\PycharmProjects\\rl_grf\\plots_ppo\\",
+        "actor_class": "ActorNetwork_v3",
+        "critic_class": "CriticNetwork_v3",
+        "model_path_actor": "C:\\Users\\loott\\PycharmProjects\\rl_grf\\models\\xIIXadjJWP_actor.pth",
+        "model_path_critic": "C:\\Users\\loott\\PycharmProjects\\rl_grf\\models\\xIIXadjJWP_critic.pth",
+        "preload_model": true,
+        "state_size": 115
     }
 }
