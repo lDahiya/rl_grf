@@ -79,7 +79,7 @@ def controller(agentName=None):
         "max_episode": 10000,
         "max_test_episode": 50,
         "sync_time": max_ep_len * 4,
-        "max_timestep": 8000000,
+        "max_timestep": 1000000,
         "epochs": 40,
         "clip": 0.2,
         "action_size": 2,
