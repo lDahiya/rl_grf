@@ -18,7 +18,9 @@ python main.py --model < modelName >
 <br/>
 Model name can be found in /model/configuration.json 
 
-
+<br /><br />
 Helper Links:
+<br />
 https://github.com/google-research/football/blob/master/gfootball/doc/scenarios.md
+<br />
 https://github.com/google-research/football/blob/master/gfootball/doc/observation.md
