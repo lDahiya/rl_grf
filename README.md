@@ -8,7 +8,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 <h2>Installation</h2>
-pip -r requirements.txt
+pip install -r requirements.txt
 
 <h2>Run</h2>
 <h3>Training & Testing</h3>

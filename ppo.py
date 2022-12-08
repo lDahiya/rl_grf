@@ -6,7 +6,6 @@ import torch.nn as nn
 from torch.distributions import Categorical
 
 from helper import loadConfigurationFile
-from networks import CriticNetwork, ActorNetwork
 
 
 class rBuffer:
