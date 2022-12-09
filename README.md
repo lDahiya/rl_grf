@@ -8,7 +8,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 <h2>Installation</h2>
-pip -r requirements.txt
+pip install -r requirements.txt
 
 <h2>Run</h2>
 <h3>Training & Testing</h3>
@@ -18,4 +18,9 @@ python main.py --model < modelName >
 <br/>
 Model name can be found in /model/configuration.json 
 
-
+<br /><br />
+Helper Links:
+<br />
+https://github.com/google-research/football/blob/master/gfootball/doc/scenarios.md
+<br />
+https://github.com/google-research/football/blob/master/gfootball/doc/observation.md
