@@ -14,7 +14,7 @@ from ppo import Agent
 
 def initializeEnvironment(config):
     print("=" * 10 + " Initializing Environment " + "=" * 10)
-    env_name = "academy_single_goal_versus_lazy"
+    env_name = "11_vs_11_easy_stochastic"
     env = football_env.create_environment(env_name=env_name, representation='simple115v2',
                                           render=False,
                                           rewards=config['reward_structure']
@@ -66,20 +66,20 @@ def savePlotsAndModel(agent, plotter, config):
 
 def controller(agentName=None):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    max_ep_len = 5000
+    max_ep_len = 10000
     if agentName is None:
         agentName = ''.join(random.choice(string.ascii_letters) for i in range(10))
     configuration = {
         'model_name': agentName,
         'env_name': "GRF",
-        'reward_structure': 'scoring',
+        'reward_structure': "checkpoints,scoring",
         "gamma": 0.99,
         "learning_rate_actor": 0.0003,
         "learning_rate_critic": 0.001,
         "max_episode": 10000,
         "max_test_episode": 50,
         "sync_time": max_ep_len * 4,
-        "max_timestep": 1000000,
+        "max_timestep": 9000000,
         "epochs": 40,
         "clip": 0.2,
         "action_size": 2,

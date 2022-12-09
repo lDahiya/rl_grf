@@ -147,8 +147,8 @@ class Agent:
                 next_state, reward, done, info = env.step(action)
                 state = torch.from_numpy(next_state)
                 total_reward += reward
-                if testMode and ((episodeNo + 1) % self.config['max_test_episode'] == 0) and self.config['render_mode']:
-                    env.render()
+                # if testMode and ((episodeNo + 1) % self.config['max_test_episode'] == 0) and self.config['render_mode']:
+                env.render()
                 if done:
                     if episodeNo % self.config['print_test'] == 0:
                         print("Finished testing %s with reward %s" % (episodeNo, total_reward))
