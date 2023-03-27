@@ -17,7 +17,10 @@ def initializeEnvironment(config):
     env_name = "11_vs_11_easy_stochastic"
     env = football_env.create_environment(env_name=env_name, representation='simple115v2',
                                           render=False,
-                                          rewards=config['reward_structure']
+                                          rewards=config['reward_structure'],
+                                          write_video=True,
+                                          write_full_episode_dumps=True,
+                                          logdir=os.getcwd() + "\\" + 'videos\\'
                                           )
     config['state_size'] = env.observation_space.shape[0]
     config['action_size'] = env.action_space.n
@@ -72,14 +75,14 @@ def controller(agentName=None):
     configuration = {
         'model_name': agentName,
         'env_name': "GRF",
-        'reward_structure': "checkpoints,scoring",
+        'reward_structure': "scoring",
         "gamma": 0.99,
         "learning_rate_actor": 0.0003,
         "learning_rate_critic": 0.001,
         "max_episode": 10000,
         "max_test_episode": 50,
-        "sync_time": max_ep_len * 4,
-        "max_timestep": 9000000,
+        "sync_time": max_ep_len * 3,
+        "max_timestep": 15000000,
         "epochs": 40,
         "clip": 0.2,
         "action_size": 2,

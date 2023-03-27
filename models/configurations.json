@@ -293,7 +293,7 @@
         "learning_rate_actor": 0.0003,
         "learning_rate_critic": 0.001,
         "max_episode": 10000,
-        "max_test_episode": 50,
+        "max_test_episode": 1000,
         "sync_time": 40000,
         "max_timestep": 9000000,
         "epochs": 40,
